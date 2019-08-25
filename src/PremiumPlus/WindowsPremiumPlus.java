@@ -11,6 +11,6 @@ public class WindowsPremiumPlus implements PremiumPlus{
 
     public String getPremiumPlusFeatures()
     {
-        return "Windows Premium Features";
+        return "Windows Premium+ Features";
     }
 }

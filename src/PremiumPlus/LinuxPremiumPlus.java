@@ -12,6 +12,6 @@ public class LinuxPremiumPlus implements PremiumPlus {
 
     public String getPremiumPlusFeatures()
     {
-        return "Linux Premium Features";
+        return "Linux Premium+ Features";
     }
 }

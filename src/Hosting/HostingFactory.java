@@ -6,8 +6,8 @@ import PremiumPlus.*;
 
 public abstract class HostingFactory {
 
-    public static final String LINUX_HOSTING = "LinuxHosting";
-    public static final String WINDOWS_HOSTING = "WindowsHosting";
+    public static final String LINUX_HOSTING = "Linux";
+    public static final String WINDOWS_HOSTING = "Windows";
 
     public abstract Basic getBasic();
     public abstract Premium getPremium();
