@@ -1,6 +1,6 @@
 package Basic;
 
-public class LinuxBasic {
+public class LinuxBasic implements Basic {
 
     private String name;
 

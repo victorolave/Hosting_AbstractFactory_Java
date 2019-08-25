@@ -1,6 +1,6 @@
 package PremiumPlus;
 
-public class WindowsPremiumPlus {
+public class WindowsPremiumPlus implements PremiumPlus{
     private String name;
 
     public WindowsPremiumPlus(String pName){ name = pName; }

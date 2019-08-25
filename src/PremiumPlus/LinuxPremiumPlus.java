@@ -1,6 +1,6 @@
 package PremiumPlus;
 
-public class LinuxPremiumPlus {
+public class LinuxPremiumPlus implements PremiumPlus {
 
     private String name;
 
