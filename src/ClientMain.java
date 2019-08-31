@@ -13,25 +13,31 @@ public class ClientMain {
 
         HostingFactory hf = HostingFactory.getHostingFactory(hostSO);
 
-        if(hostType.equals("Basic"))
+        try {
+
+            if(hostType.equalsIgnoreCase("Basic"))
+            {
+                Basic b = hf.getBasic();
+                response = "Name: " + b.getBasicName() + " Features: " + b.getBasicFeatures();
+            }
+
+            if(hostType.equalsIgnoreCase("Premium"))
+            {
+                Premium p = hf.getPremium();
+                response = "Name: " + p.getPremiumName() + " Features: " + p.getPremiumFeatures();
+            }
+
+            if(hostType.equalsIgnoreCase("Premium+"))
+            {
+                PremiumPlus pp = hf.getPremiumPlus();
+                response = "Name: " + pp.getPremiumPlusName() + " Features: " + pp.getPremiumPlusFeatures();
+            }
+
+            System.out.println(response);
+
+        }catch (NullPointerException e)
         {
-            Basic b = hf.getBasic();
-            response = "Name: " + b.getBasicName() + " Features: " + b.getBasicFeatures();
+            System.out.println("Tipo no encontrado...");
         }
-
-        if(hostType.equals("Premium"))
-        {
-            Premium p = hf.getPremium();
-            response = "Name: " + p.getPremiumName() + " Features: " + p.getPremiumFeatures();
-        }
-
-        if(hostType.equals("Premium+"))
-        {
-            PremiumPlus pp = hf.getPremiumPlus();
-            response = "Name: " + pp.getPremiumPlusName() + " Features: " + pp.getPremiumPlusFeatures();
-        }
-
-        System.out.println(response);
-
     }
 }

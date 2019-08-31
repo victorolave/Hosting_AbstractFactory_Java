@@ -15,13 +15,13 @@ public abstract class HostingFactory {
 
     public static HostingFactory getHostingFactory(String type)
     {
-        if(type.equals(HostingFactory.LINUX_HOSTING))
+        if(type.equalsIgnoreCase(HostingFactory.LINUX_HOSTING))
             return new LinuxHostingFactory();
 
-        if(type.equals(HostingFactory.WINDOWS_HOSTING))
+        if(type.equalsIgnoreCase(HostingFactory.WINDOWS_HOSTING))
             return new WindowsHostingFactory();
 
-        return new LinuxHostingFactory();
+        return null;
     }
 
 }
